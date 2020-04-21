@@ -143,8 +143,6 @@ def main():
         instructable_ids = crawler.get_instructable_ids()
         pickle.dump(instructable_ids, open("instructable_ids.pkl", 'wb'))
 
-    import ipdb; ipdb.set_trace()
-
     if not os.path.exists("./instructable_data.json"):
         instructables_data = crawler.get_instructables_data(instructable_ids)
         with open("instructables.json", 'w') as fp:
